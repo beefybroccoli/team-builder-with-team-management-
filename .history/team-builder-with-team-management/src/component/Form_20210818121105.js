@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 export default function Form(props) {
   //initial state
@@ -50,6 +50,8 @@ export default function Form(props) {
       ...formData,
       [event.target.name]: event.target.value,
     });
+
+    // console.log("Form.js onChange, formData = ", formData);
   }; //end onChange function
 
   return (
