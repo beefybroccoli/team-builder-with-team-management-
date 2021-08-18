@@ -35,7 +35,7 @@ export default function Form(props) {
       event.preventDefault();
 
       //add member to member_list
-      props.input_func_set_Member({ ...formData, id: Date.now() });
+      props.input_func_set_Member(formData);
 
       //reset formData
       setFormData(blank_state);

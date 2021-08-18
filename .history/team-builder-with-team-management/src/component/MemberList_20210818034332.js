@@ -19,9 +19,8 @@ export default function MemberList(props) {
             return (
               <div>
                 <p>
-                  {object.id}, {object.input_text_firstName}{" "}
-                  {object.input_text_lastName}, {object.input_select_title},{" "}
-                  {object.input_text_email}
+                  {id}, {object.input_text_firstName} {object.input_text_lastName}
+                  , {object.input_select_title}, {object.input_text_email}
                 </p>
               </div>
             );

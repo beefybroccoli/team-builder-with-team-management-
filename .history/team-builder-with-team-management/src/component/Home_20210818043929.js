@@ -17,9 +17,9 @@ export default function Home(props) {
       //determine if an object currently exist in array
       //...return True - if exist in member_list
       //...return False - if does not exist in member_list
-      for (let object of Array.from(member_list)) {
+      for (let object in Array.from(member_list)) {
         if (member.id === object.id) {
-          console.log(`member.id = ${member.id},  object.id =  ${object.id}`);
+          console.log(`member.id = ${member.id,  object.id =  object.id`)
           is_it_in_member_list = true;
         }
       }
@@ -56,7 +56,7 @@ export default function Home(props) {
   const cb_modify_existing_member = () => {
     //find index of the current object in array
     let index = -1;
-    for (let object of Array.from(member_list)) {
+    for (let object in Array.from(member_list)) {
       index += 1;
       if (member.id === object.id) {
         continue;

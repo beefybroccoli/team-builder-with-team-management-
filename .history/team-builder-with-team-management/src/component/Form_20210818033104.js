@@ -20,7 +20,6 @@ export default function Form(props) {
 
   const blank_state = () => {
     return {
-      id: "",
       input_text_firstName: "",
       input_text_lastName: "",
       input_select_title: "",
@@ -35,12 +34,12 @@ export default function Form(props) {
       event.preventDefault();
 
       //add member to member_list
-      props.input_func_set_Member({ ...formData, id: Date.now() });
+      props.input_func_set_Member(formData);
 
       //reset formData
       setFormData(blank_state);
 
-      console.log("after add, formData = ", formData);
+      console.log("formData = ", formData);
     }
 
     if (props.button_name === "Modify") {
@@ -50,6 +49,8 @@ export default function Form(props) {
       props.input_func_set_Member(formData);
 
       console.log("after modify, formData = ", formData);
+    }
+
     }
   }; //end onSubmit function
 

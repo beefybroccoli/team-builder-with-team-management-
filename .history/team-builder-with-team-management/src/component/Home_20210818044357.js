@@ -56,7 +56,7 @@ export default function Home(props) {
   const cb_modify_existing_member = () => {
     //find index of the current object in array
     let index = -1;
-    for (let object of Array.from(member_list)) {
+    for (let object  Array.from(member_list)) {
       index += 1;
       if (member.id === object.id) {
         continue;

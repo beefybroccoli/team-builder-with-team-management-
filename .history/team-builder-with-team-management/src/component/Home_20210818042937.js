@@ -14,26 +14,26 @@ export default function Home(props) {
       //find the member.id match any current member in member_list
       let is_it_in_member_list = false;
 
-      //determine if an object currently exist in array
-      //...return True - if exist in member_list
-      //...return False - if does not exist in member_list
-      for (let object of Array.from(member_list)) {
+      for (object in Array.from(member_list)) {
         if (member.id === object.id) {
-          console.log(`member.id = ${member.id},  object.id =  ${object.id}`);
           is_it_in_member_list = true;
         }
       }
 
       //member id currently exist in member_list, modify
-      if (is_it_in_member_list === true) {
+      if (result_array.length === true) {
         console.log("Home.js, case modify member");
-        cb_modify_existing_member();
+        cb_modify_existing_member(result_array[0]);
       }
       //member id do not exist in member_list, so add new member
       if (is_it_in_member_list === false) {
         console.log("Home.js, case add new member");
         //case add new member
         cb_add_new_member();
+      }
+
+      if (result_array.length > 1) {
+        console.log("there are duplicate ID number");
       }
     }
   }, [member]);
@@ -53,16 +53,7 @@ export default function Home(props) {
     console.log("Home.js useEffect, member_list = ", member_list);
   };
 
-  const cb_modify_existing_member = () => {
-    //find index of the current object in array
-    let index = -1;
-    for (let object of Array.from(member_list)) {
-      index += 1;
-      if (member.id === object.id) {
-        continue;
-      }
-    }
-
+  const cb_modify_existing_member = (index) => {
     //create a temporary array
     const temp_array = [...member_list];
 
