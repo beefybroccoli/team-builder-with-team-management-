@@ -69,17 +69,18 @@ export default function Home(props) {
       }
     }
 
-    console.log("Home.js, index = ", index);
+    console.log("Home.js, ")
 
     //create a temporary array
     const temp_array = [...member_list];
 
     //store the object in the temp_array by index with matching ID
-
-    console.log("index = ", index);
-    console.log(`before temp_array[${index}] = `, temp_array[index]);
-    temp_array[index] = member;
-    console.log(`after temp_array[${index}] = `, temp_array[index]);
+    if (index) {
+      // console.log("index = ", index);
+      // console.log(`before temp_array[${index}] = `, temp_array[index]);
+      temp_array[index] = member;
+      // console.log(`after temp_array[${index}] = `, temp_array[index]);
+    }
 
     //store temp_arry in member_list
     set_MemberList(temp_array);

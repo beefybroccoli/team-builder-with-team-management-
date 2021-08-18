@@ -2,6 +2,21 @@ import React, { useState, useContext } from "react";
 
 export default function Form(props) {
   //initial state
+  const initial_state = () => {
+    if (props.input_object !== null) {
+      //   console.log(props.input_object);
+      return { ...props.input_object };
+    } //end if
+    else {
+      return {
+        id: "",
+        input_text_firstName: "",
+        input_text_lastName: "",
+        input_select_title: "",
+        input_text_email: "",
+      };
+    } //end else
+  }; //initial_state
 
   const blank_state = () => {
     return {
@@ -12,16 +27,6 @@ export default function Form(props) {
       input_text_email: "",
     };
   };
-
-  const initial_state = () => {
-    if (props.input_object !== null) {
-      //   console.log(props.input_object);
-      return { ...props.input_object };
-    } //end if
-    else {
-      return blank_state;
-    } //end else
-  }; //initial_state
 
   const [formData, setFormData] = useState(initial_state);
 
@@ -35,17 +40,16 @@ export default function Form(props) {
       //reset formData
       setFormData(blank_state);
 
-      //   console.log("after add, formData = ", formData);
+    //   console.log("after add, formData = ", formData);
     }
 
     if (props.button_name === "Modify") {
       event.preventDefault();
 
       //add member to member_list
-      props.input_func_set_Member({ ...formData });
+      props.input_func_set_Member(formData);
 
-      //reset formData
-      // setFormData(blank_state);
+      
 
       //   console.log("after modify, formData = ", formData);
     }
@@ -57,8 +61,6 @@ export default function Form(props) {
       ...formData,
       [event.target.name]: event.target.value,
     });
-
-    // console.log("Form.js onChange, formData = ", formData);
   }; //end onChange function
 
   return (

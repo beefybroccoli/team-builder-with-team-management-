@@ -58,7 +58,7 @@ export default function Form(props) {
       [event.target.name]: event.target.value,
     });
 
-    // console.log("Form.js onChange, formData = ", formData);
+    console.log("Form.js onChange, formData = ", formData);
   }; //end onChange function
 
   return (

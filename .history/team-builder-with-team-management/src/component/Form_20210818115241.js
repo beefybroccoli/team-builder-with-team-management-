@@ -42,7 +42,7 @@ export default function Form(props) {
       event.preventDefault();
 
       //add member to member_list
-      props.input_func_set_Member({ ...formData });
+      props.input_func_set_Member({..formData);
 
       //reset formData
       // setFormData(blank_state);
@@ -58,7 +58,7 @@ export default function Form(props) {
       [event.target.name]: event.target.value,
     });
 
-    // console.log("Form.js onChange, formData = ", formData);
+    console.log("Form.js onChange, formData = ", formData);
   }; //end onChange function
 
   return (
