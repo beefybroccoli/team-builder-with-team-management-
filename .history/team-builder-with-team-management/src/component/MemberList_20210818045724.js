@@ -63,18 +63,18 @@ export default function MemberList(props) {
 }
 
 
-  <>
+              <>
     <p>
       id, {input_text_firstName} , {input_text_lastName},
       {input_text_email}, {input_select_title}
     </p>
   </>
 
-    <>
-    <p>
-      id, {object.input_text_firstName} ,{" "}
-      {object.input_text_lastName},{object.input_text_email},{" "}
-      {object.input_select_title}
-    </p>
-  </>,
+                <>
+                <p>
+                  id, {object.input_text_firstName} ,{" "}
+                  {object.input_text_lastName},{object.input_text_email},{" "}
+                  {object.input_select_title}
+                </p>
+              </>,
 */
