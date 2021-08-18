@@ -24,7 +24,7 @@ export default function Home(props) {
 
     //else, add the member to the array
     console.log("newMember = ", member);
-    temp_array.push({ ...member, id: Date.now() });
+    temp_array.push({ ...member,id: });
 
     set_MemberList(temp_array);
 

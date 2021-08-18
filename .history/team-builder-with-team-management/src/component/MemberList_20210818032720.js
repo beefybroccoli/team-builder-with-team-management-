@@ -27,13 +27,7 @@ export default function MemberList(props) {
           })}
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          "flex-direction": "row",
-          "flex-wrap": "wrap",
-        }}
-      >
+      <div style={{ display: "flex", "flex-direction": "row","flex-wrap": }}>
         {props.input_member_list &&
           props.input_member_list.map((member, index) => {
             return (

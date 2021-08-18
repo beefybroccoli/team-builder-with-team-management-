@@ -9,7 +9,6 @@ export default function Form(props) {
     } //end if
     else {
       return {
-        id: "",
         input_text_firstName: "",
         input_text_lastName: "",
         input_select_title: "",
@@ -30,19 +29,19 @@ export default function Form(props) {
   const [formData, setFormData] = useState(initial_state);
 
   const onSubmit = (event) => {
-    if (props.button_name === "Add") {
+    if ((props.button_name === "Add")) {
       event.preventDefault();
 
       //add member to member_list
       props.input_func_set_Member(formData);
 
       //reset formData
-      setFormData(blank_state);
+      setFormData(initial_state);
 
       console.log("formData = ", formData);
     }
 
-    if (props.button_name === "Modify") {
+    if ((props.button_name = "Modify")) {
     }
   }; //end onSubmit function
 
@@ -67,7 +66,7 @@ export default function Form(props) {
         <label
           style={{ display: props.button_name === "Modify" ? "block" : "none" }}
         >
-          ID: <input id="id" name="id" value={formData.id} />
+          ID: <input />
         </label>
         <label>
           FirstName:

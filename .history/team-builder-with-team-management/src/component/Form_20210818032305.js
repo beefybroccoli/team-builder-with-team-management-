@@ -9,7 +9,7 @@ export default function Form(props) {
     } //end if
     else {
       return {
-        id: "",
+        id:""
         input_text_firstName: "",
         input_text_lastName: "",
         input_select_title: "",
@@ -37,7 +37,7 @@ export default function Form(props) {
       props.input_func_set_Member(formData);
 
       //reset formData
-      setFormData(blank_state);
+      setFormData(initial_state);
 
       console.log("formData = ", formData);
     }
@@ -67,7 +67,7 @@ export default function Form(props) {
         <label
           style={{ display: props.button_name === "Modify" ? "block" : "none" }}
         >
-          ID: <input id="id" name="id" value={formData.id} />
+          ID: <input />
         </label>
         <label>
           FirstName:

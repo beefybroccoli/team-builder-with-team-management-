@@ -37,7 +37,7 @@ export default function Form(props) {
       props.input_func_set_Member(formData);
 
       //reset formData
-      setFormData(blank_state);
+      setFormData(initial_state);
 
       console.log("formData = ", formData);
     }
