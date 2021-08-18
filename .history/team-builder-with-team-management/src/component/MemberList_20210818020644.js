@@ -10,6 +10,7 @@ export default function MemberList(props) {
   return (
     <div>
       <h1>MemberList Page</h1>
+      <p>length of array is {props.input_member_list.length}</p>
 
       {
         props.input_member_list &&
@@ -30,9 +31,6 @@ export default function MemberList(props) {
 } //end MemberList function
 
 /*
-
- <p>length of array is {props.input_member_list.length}</p>
-
 {
   input_text_firstName,
   input_text_lastName,

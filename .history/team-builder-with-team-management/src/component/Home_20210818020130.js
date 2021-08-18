@@ -1,28 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Form from "../component/Form";
 import MemberList from "../component/MemberList";
-import MemberCard from "../component/MemberCard";
 import { temp_members } from "../component/constant";
 
 export default function Home(props) {
-  const [member_list, set_MemberList] = useState(temp_members);
-  // const [member_list, set_MemberList] = useState([]);
+  // const [member_list, set_MemberList] = useState(temp_members);
+  const [member_list, set_MemberList] = useState([]);
   const [newMember, set_newMember] = useState(null);
-  const [existingMember, set_existingMember] = useState(null);
 
   useEffect(() => {
     if (newMember !== null) {
       //case add new member
       cb_add_new_member();
-    }
-  }, [newMember]);
 
-  useEffect(() => {
-    if (newMember !== null) {
       //case modify existing member
       cb_modify_existing_member();
     }
-  }, [existingMember]);
+  }, [newMember]);
 
   const cb_add_new_member = () => {
     //create a temporary array
@@ -58,10 +52,7 @@ export default function Home(props) {
       <p>length of member_list is {Array.from(member_list).length}</p>
       <p>Render the member lists</p>
       <MemberList input_member_list={member_list} />
-      <MemberCard
-        input_func_modify_member={set_existingMember}
-        input_temp_member={temp_members[0]}
-      />
+      <MemberCard func_modify_member={set_newMember} />
     </div>
   );
 }

@@ -5,8 +5,8 @@ import MemberCard from "../component/MemberCard";
 import { temp_members } from "../component/constant";
 
 export default function Home(props) {
-  const [member_list, set_MemberList] = useState(temp_members);
-  // const [member_list, set_MemberList] = useState([]);
+  // const [member_list, set_MemberList] = useState(temp_members);
+  const [member_list, set_MemberList] = useState([]);
   const [newMember, set_newMember] = useState(null);
   const [existingMember, set_existingMember] = useState(null);
 
