@@ -20,4 +20,3 @@ export const temp_members = [
     input_select_title: "Senior Developer",
     input_text_email: "chan_chou@yahoo.com",
   },
-];
