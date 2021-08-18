@@ -9,11 +9,6 @@ export default function Home(props) {
   const [member_list, set_MemberList] = useState([]);
   const [member, set_Member] = useState(null);
 
-  if (member_list.length === 0) {
-    const temp_array = [...temp_members];
-    set_MemberList(temp_array);
-  }
-
   useEffect(() => {
     if (member !== null) {
       //find the member.id match any current member in member_list

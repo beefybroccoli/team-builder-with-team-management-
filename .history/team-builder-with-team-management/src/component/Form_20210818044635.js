@@ -40,7 +40,7 @@ export default function Form(props) {
       //reset formData
       setFormData(blank_state);
 
-    //   console.log("after add, formData = ", formData);
+      console.log("after add, formData = ", formData);
     }
 
     if (props.button_name === "Modify") {

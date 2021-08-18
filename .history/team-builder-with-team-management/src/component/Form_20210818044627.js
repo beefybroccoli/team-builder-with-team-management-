@@ -4,7 +4,7 @@ export default function Form(props) {
   //initial state
   const initial_state = () => {
     if (props.input_object !== null) {
-      //   console.log(props.input_object);
+    //   console.log(props.input_object);
       return { ...props.input_object };
     } //end if
     else {
@@ -40,7 +40,7 @@ export default function Form(props) {
       //reset formData
       setFormData(blank_state);
 
-    //   console.log("after add, formData = ", formData);
+      console.log("after add, formData = ", formData);
     }
 
     if (props.button_name === "Modify") {
@@ -49,7 +49,7 @@ export default function Form(props) {
       //add member to member_list
       props.input_func_set_Member(formData);
 
-      //   console.log("after modify, formData = ", formData);
+      console.log("after modify, formData = ", formData);
     }
   }; //end onSubmit function
 

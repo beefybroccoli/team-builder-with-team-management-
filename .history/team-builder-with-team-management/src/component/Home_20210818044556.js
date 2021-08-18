@@ -9,11 +9,6 @@ export default function Home(props) {
   const [member_list, set_MemberList] = useState([]);
   const [member, set_Member] = useState(null);
 
-  if (member_list.length === 0) {
-    const temp_array = [...temp_members];
-    set_MemberList(temp_array);
-  }
-
   useEffect(() => {
     if (member !== null) {
       //find the member.id match any current member in member_list
@@ -24,7 +19,7 @@ export default function Home(props) {
       //...return False - if does not exist in member_list
       for (let object of Array.from(member_list)) {
         if (member.id === object.id) {
-          // console.log(`member.id = ${member.id},  object.id =  ${object.id}`);
+          console.log(`member.id = ${member.id},  object.id =  ${object.id}`);
           is_it_in_member_list = true;
         }
       }
@@ -36,7 +31,7 @@ export default function Home(props) {
       }
       //member id do not exist in member_list, so add new member
       if (is_it_in_member_list === false) {
-        // console.log("Home.js, case add new member");
+        console.log("Home.js, case add new member");
         //case add new member
         cb_add_new_member();
       }
@@ -50,12 +45,12 @@ export default function Home(props) {
     //if the member already exist, do not add
 
     //else, add the member to the array
-    // console.log("newMember = ", member);
+    console.log("newMember = ", member);
     temp_array.push({ ...member });
 
     set_MemberList(temp_array);
 
-    // console.log("Home.js useEffect, member_list = ", member_list);
+    console.log("Home.js useEffect, member_list = ", member_list);
   };
 
   const cb_modify_existing_member = () => {
@@ -73,10 +68,10 @@ export default function Home(props) {
 
     //store the object in the temp_array by index with matching ID
     if (index) {
-      // console.log("index = ", index);
-      // console.log(`before temp_array[${index}] = `, temp_array[index]);
+      console.log("index = ", index);
+      console.log(`before temp_array[${index}] = `, temp_array[index]);
       temp_array[index] = member;
-      // console.log(`after temp_array[${index}] = `, temp_array[index]);
+      console.log(`after temp_array[${index}] = `, temp_array[index]);
     }
 
     //store temp_arry in member_list

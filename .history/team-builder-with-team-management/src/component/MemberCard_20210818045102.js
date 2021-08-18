@@ -8,14 +8,7 @@ import Form from "../component/Form";
  */
 export default function MemberCard(props) {
   return (
-    <div
-      style={{
-        border: "5px black solid",
-        "margin-left": "auto",
-        "margin-right": "auto",
-        padding: "auto",
-      }}
-    >
+    <div style={{ border: "5px black solid" text-align:"center" }}>
       <h3>MemberCard</h3>
       <h4>
         {props.input_object.input_text_firstName}{" "}

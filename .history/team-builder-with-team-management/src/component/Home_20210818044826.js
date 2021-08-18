@@ -9,10 +9,7 @@ export default function Home(props) {
   const [member_list, set_MemberList] = useState([]);
   const [member, set_Member] = useState(null);
 
-  if (member_list.length === 0) {
-    const temp_array = [...temp_members];
-    set_MemberList(temp_array);
-  }
+  if ()
 
   useEffect(() => {
     if (member !== null) {

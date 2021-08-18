@@ -13,7 +13,7 @@ export default function MemberCard(props) {
         border: "5px black solid",
         "margin-left": "auto",
         "margin-right": "auto",
-        padding: "auto",
+        
       }}
     >
       <h3>MemberCard</h3>
