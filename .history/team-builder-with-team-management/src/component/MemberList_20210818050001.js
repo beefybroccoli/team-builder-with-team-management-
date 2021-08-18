@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { temp_members } from "../component/constant";
 import MemberCard from "./MemberCard";
 
 /**
