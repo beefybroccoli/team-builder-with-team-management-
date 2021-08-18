@@ -9,20 +9,20 @@ export default function Home(props) {
   const [newMember, set_newMember] = useState(null);
 
   useEffect(() => {
-    if (newMember !== null) {
-      //create a temporary array
-      const temp_array = [...member_list];
 
-      //if the member already exist, do not add
+    if( newMember !== null){}
+    //create a temporary array
+    const temp_array = [...member_list];
 
-      //else, add the member to the array
-      console.log("newMember = ", newMember);
-      temp_array.push({ ...newMember });
+    //if the member already exist, do not add
 
-      set_MemberList(temp_array);
+    //else, add the member to the array
+    console.log("newMember = ", newMember);
+    temp_array.push({ ...newMember });
 
-      console.log("Home.js useEffect, member_list = ", member_list);
-    }
+    set_MemberList(temp_array);
+
+    console.log("Home.js useEffect, member_list = ", member_list);
   }, [newMember]);
 
   return (
