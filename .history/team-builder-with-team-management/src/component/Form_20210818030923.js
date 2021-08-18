@@ -60,7 +60,6 @@ export default function Form(props) {
         onclick={onSubmit}
         style={{
           display: props.button_name === "Modify" ? "flex" : "block",
-          "flex-direction": "column",
         }}
       >
         <label

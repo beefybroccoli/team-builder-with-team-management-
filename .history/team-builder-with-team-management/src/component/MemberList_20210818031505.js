@@ -27,11 +27,11 @@ export default function MemberList(props) {
           })}
       </div>
 
-      <div style={{ display: "flex", "flex-direction": "row" }}>
+      <div style={{ display: "flex", "flex-direction": "row",border:"black 1px blue", m }}>
         {props.input_member_list &&
           props.input_member_list.map((member, index) => {
             return (
-              <div style={{ border: "black 10px blue", margin: "10px" }}>
+              <div>
                 <MemberCard
                   input_object={member}
                   input_func_set_Member={props.input_func_set_Member}

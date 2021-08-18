@@ -42,6 +42,9 @@ export default function Form(props) {
     }
 
     if ((props.button_name = "Modify")) {
+
+
+
     }
   }; //end onSubmit function
 
@@ -56,18 +59,8 @@ export default function Form(props) {
   return (
     <div>
       <header>Generic Form</header>
-      <form
-        onclick={onSubmit}
-        style={{
-          display: props.button_name === "Modify" ? "flex" : "block",
-          "flex-direction": "column",
-        }}
-      >
-        <label
-          style={{ display: props.button_name === "Modify" ? "block" : "none" }}
-        >
-          ID: <input />
-        </label>
+      <form onclick={onSubmit}>
+          <label></label>
         <label>
           FirstName:
           <input

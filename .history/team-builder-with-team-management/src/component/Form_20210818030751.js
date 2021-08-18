@@ -56,13 +56,7 @@ export default function Form(props) {
   return (
     <div>
       <header>Generic Form</header>
-      <form
-        onclick={onSubmit}
-        style={{
-          display: props.button_name === "Modify" ? "flex" : "block",
-          "flex-direction": "column",
-        }}
-      >
+      <form onclick={onSubmit}>
         <label
           style={{ display: props.button_name === "Modify" ? "block" : "none" }}
         >

@@ -31,7 +31,7 @@ export default function MemberList(props) {
         {props.input_member_list &&
           props.input_member_list.map((member, index) => {
             return (
-              <div style={{ border: "black 10px blue", margin: "10px" }}>
+              <div style={{}}>
                 <MemberCard
                   input_object={member}
                   input_func_set_Member={props.input_func_set_Member}
