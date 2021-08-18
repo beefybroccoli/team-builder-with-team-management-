@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 
 function Form(props) {
+  //initial state
   const initial_state = () => {
     return {
       input_text_firstName: "",
@@ -15,10 +16,17 @@ function Form(props) {
   const onSubmit = (event) => {
     event.preventDefault();
 
+    //add member to member_list
+    props.func_add_member(formData);
+
+    //reset formData
+    setFormData(initial_state);
+
     console.log(formData);
   }; //end onSubmit function
 
   const onChange = (event) => {
+    //send data to formData
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
@@ -76,7 +84,7 @@ function Form(props) {
             <option value="IT Support">IT Support</option>
           </select>
         </label>
-        <button onClick={onSubmit}>Submit</button>
+        <button onClick={onSubmit}>Add</button>
       </form>
     </div>
   );
