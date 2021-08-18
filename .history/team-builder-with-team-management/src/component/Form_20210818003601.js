@@ -22,7 +22,7 @@ export default function Form(props) {
     //reset formData
     setFormData(initial_state);
 
-    console.log("formData = ", formData);
+    console.log(formData);
   }; //end onSubmit function
 
   const onChange = (event) => {

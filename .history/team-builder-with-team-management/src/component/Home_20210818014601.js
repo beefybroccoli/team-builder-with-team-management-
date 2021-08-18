@@ -10,7 +10,7 @@ export default function Home(props) {
 
   useEffect(() => {
     //create a temporary array
-    const temp_array = [...member_list];
+    const temp_array = [.member_list;
 
     //if the member already exist, do not add
 

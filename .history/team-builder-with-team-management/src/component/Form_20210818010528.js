@@ -16,13 +16,25 @@ export default function Form(props) {
   const onSubmit = (event) => {
     event.preventDefault();
 
+    const temp_array = member_list;
+
+    //if the member already exist, do not add
+
+    //else, add the member to the array
+    temp_array.push(object);
+    member_array.push(object);
+
+    //setMember
+
+    set_MemberList(temp_array);
+
     //add member to member_list
     props.func_add_member(formData);
 
     //reset formData
     setFormData(initial_state);
 
-    console.log("formData = ", formData);
+    console.log(formData);
   }; //end onSubmit function
 
   const onChange = (event) => {

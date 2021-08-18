@@ -22,7 +22,7 @@ export default function Form(props) {
     //reset formData
     setFormData(initial_state);
 
-    console.log("formData = ", formData);
+    console.log(formData);
   }; //end onSubmit function
 
   const onChange = (event) => {
@@ -89,3 +89,22 @@ export default function Form(props) {
     </div>
   );
 } //end render
+
+
+//clear formData
+// for (let key in formData) {
+//   console.log(`formData[${key}] = ${formData[key]}`);
+//   formData[key] = "";
+//   console.log(`formData[${key}] = ${formData[key]}`);
+// }
+
+/*text input validation check
+
+    // const pattern_text = "^[a-zA-Z]+$";
+    // const regex = new RegExp(pattern_text);
+    // if (event.target.name === "input_select_title") {
+    // } else if (regex.test(event.target.value)) {
+    // } else {
+    // } //end else
+
+*/

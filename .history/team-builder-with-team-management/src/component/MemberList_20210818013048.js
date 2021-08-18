@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { temp_members } from "../component/constant";
 
 /**
  * a list of members inside a panel for a overview and other calculation
@@ -15,14 +14,7 @@ export default function MemberList(props) {
       {
         props.input_member_list &&
           props.input_member_list.map((object, index) => {
-            return (
-              <div>
-                <p>
-                  id, {object.input_text_firstName} {object.input_text_lastName}
-                  , {object.input_select_title}, {object.input_text_email}
-                </p>
-              </div>
-            );
+            return (<></>;
           })
         //end expression
       }

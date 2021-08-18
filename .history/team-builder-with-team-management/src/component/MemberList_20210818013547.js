@@ -16,12 +16,13 @@ export default function MemberList(props) {
         props.input_member_list &&
           props.input_member_list.map((object, index) => {
             return (
-              <div>
+              <>
+              <div></div>
                 <p>
                   id, {object.input_text_firstName} {object.input_text_lastName}
                   , {object.input_select_title}, {object.input_text_email}
                 </p>
-              </div>
+              </>
             );
           })
         //end expression

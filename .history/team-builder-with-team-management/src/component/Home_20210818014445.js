@@ -5,12 +5,12 @@ import { temp_members } from "../component/constant";
 
 export default function Home(props) {
   // const [member_list, set_MemberList] = useState(temp_members);
-  const [member_list, set_MemberList] = useState([]);
+  // const [member_list, set_MemberList] = useState([]);
   const [newMember, set_newMember] = useState(null);
 
   useEffect(() => {
     //create a temporary array
-    const temp_array = [...member_list];
+    const temp_array = member_list;
 
     //if the member already exist, do not add
 

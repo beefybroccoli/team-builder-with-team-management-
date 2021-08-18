@@ -16,13 +16,16 @@ export default function Form(props) {
   const onSubmit = (event) => {
     event.preventDefault();
 
+    
+
+
     //add member to member_list
     props.func_add_member(formData);
 
     //reset formData
     setFormData(initial_state);
 
-    console.log("formData = ", formData);
+    console.log(formData);
   }; //end onSubmit function
 
   const onChange = (event) => {

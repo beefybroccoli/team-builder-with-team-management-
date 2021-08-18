@@ -16,6 +16,7 @@ export default function MemberList(props) {
         props.input_member_list &&
           props.input_member_list.map((object, index) => {
             return (
+              
               <div>
                 <p>
                   id, {object.input_text_firstName} {object.input_text_lastName}
