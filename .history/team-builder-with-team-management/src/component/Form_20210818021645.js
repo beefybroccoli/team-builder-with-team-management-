@@ -3,21 +3,6 @@ import React, { useState, useContext } from "react";
 export default function Form(props) {
   //initial state
   const initial_state = () => {
-    if (props.input_object !== null) {
-      console.log(props.input_object);
-      return { ...props.input_object };
-    } //end if
-    else {
-      return {
-        input_text_firstName: "",
-        input_text_lastName: "",
-        input_select_title: "",
-        input_text_email: "",
-      };
-    } //end else
-  }; //initial_state
-
-  const blank_state = () => {
     return {
       input_text_firstName: "",
       input_text_lastName: "",
@@ -32,7 +17,7 @@ export default function Form(props) {
     event.preventDefault();
 
     //add member to member_list
-    props.input_func_set_Member(formData);
+    props.func_add_member(formData);
 
     //reset formData
     setFormData(initial_state);
@@ -99,7 +84,7 @@ export default function Form(props) {
             <option value="IT Support">IT Support</option>
           </select>
         </label>
-        <button onClick={onSubmit}>{props.button_name}</button>
+        <button onClick={onSubmit}>{props.button_na}</button>
       </form>
     </div>
   );

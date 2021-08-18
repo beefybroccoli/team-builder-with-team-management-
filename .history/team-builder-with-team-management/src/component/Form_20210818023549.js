@@ -3,21 +3,6 @@ import React, { useState, useContext } from "react";
 export default function Form(props) {
   //initial state
   const initial_state = () => {
-    if (props.input_object !== null) {
-      console.log(props.input_object);
-      return { ...props.input_object };
-    } //end if
-    else {
-      return {
-        input_text_firstName: "",
-        input_text_lastName: "",
-        input_select_title: "",
-        input_text_email: "",
-      };
-    } //end else
-  }; //initial_state
-
-  const blank_state = () => {
     return {
       input_text_firstName: "",
       input_text_lastName: "",

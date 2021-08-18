@@ -33,7 +33,7 @@ export default function MemberList(props) {
             return (
               <div>
                 <MemberCard
-                  input_object={member}
+                  input_object={props.input_member_list[0]}
                   input_func_set_Member={props.input_func_set_Member}
                 />
               </div>

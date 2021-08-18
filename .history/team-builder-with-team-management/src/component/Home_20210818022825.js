@@ -51,7 +51,7 @@ export default function Home(props) {
       <p>Render the member lists</p>
       <MemberList
         input_member_list={member_list}
-        input_func_set_Member={set_Member}
+        input_func_set_existingMember={set_existingMember}
       />
     </div>
   );

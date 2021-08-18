@@ -46,12 +46,12 @@ export default function Home(props) {
   return (
     <div>
       <h1>Home Page</h1>
-      <Form input_func_set_Member={set_Member} button_name="Add" />
+      <Form input_func_add_member={set_Member} button_name="Add" />
       <p>length of member_list is {Array.from(member_list).length}</p>
       <p>Render the member lists</p>
       <MemberList
         input_member_list={member_list}
-        input_func_set_Member={set_Member}
+        input_func_set_existingMember={set_existingMember}
       />
     </div>
   );

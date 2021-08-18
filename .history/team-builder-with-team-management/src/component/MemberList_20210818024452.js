@@ -27,19 +27,10 @@ export default function MemberList(props) {
           })}
       </div>
 
-      <div>
-        {props.input_member_list &&
-          props.input_member_list.map((member, index) => {
-            return (
-              <div>
-                <MemberCard
-                  input_object={member}
-                  input_func_set_Member={props.input_func_set_Member}
-                />
-              </div>
-            );
-          })}
-      </div>
+      <MemberCard
+        input_object={props.input_member_list[0]}
+        input_func_set_Member={props.input_func_set_Member}
+      />
     </div>
   );
 } //end MemberList function

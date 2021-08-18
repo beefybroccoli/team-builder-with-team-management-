@@ -5,7 +5,7 @@ export default function Form(props) {
   const initial_state = () => {
     if (props.input_object !== null) {
       console.log(props.input_object);
-      return { ...props.input_object };
+      return ({...})
     } //end if
     else {
       return {

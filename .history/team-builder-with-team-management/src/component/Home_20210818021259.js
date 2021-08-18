@@ -7,14 +7,22 @@ import { temp_members } from "../component/constant";
 export default function Home(props) {
   const [member_list, set_MemberList] = useState(temp_members);
   // const [member_list, set_MemberList] = useState([]);
-  const [member, set_Member] = useState(null);
+  const [newMember, set_newMember] = useState(null);
+  const [existingMember, set_existingMember] = useState(null);
 
   useEffect(() => {
-    if (member !== null) {
+    if (newMember !== null) {
       //case add new member
       cb_add_new_member();
     }
-  }, [member]);
+  }, [newMember]);
+
+  useEffect(() => {
+    if (newMember !== null) {
+      //case modify existing member
+      cb_modify_existing_member();
+    }
+  }, [existingMember]);
 
   const cb_add_new_member = () => {
     //create a temporary array
@@ -23,8 +31,8 @@ export default function Home(props) {
     //if the member already exist, do not add
 
     //else, add the member to the array
-    console.log("newMember = ", member);
-    temp_array.push({ ...member });
+    console.log("newMember = ", newMember);
+    temp_array.push({ ...newMember });
 
     set_MemberList(temp_array);
 
@@ -46,12 +54,13 @@ export default function Home(props) {
   return (
     <div>
       <h1>Home Page</h1>
-      <Form input_func_set_Member={set_Member} button_name="Add" />
+      <Form func_add_member={set_newMember} />
       <p>length of member_list is {Array.from(member_list).length}</p>
       <p>Render the member lists</p>
-      <MemberList
-        input_member_list={member_list}
-        input_func_set_Member={set_Member}
+      <MemberList input_member_list={member_list} />
+      <MemberCard
+        input_func_modify_member={set_existingMember}
+        input_temp_member={temp_members[0]}
       />
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { temp_members } from "../component/constant";
-import MemberCard from "./MemberCard";
 
 /**
  * a list of members inside a panel for a overview and other calculation
@@ -8,13 +7,12 @@ import MemberCard from "./MemberCard";
  * @returns
  */
 export default function MemberList(props) {
-  const cb_print_list = () => {};
-
   return (
     <div>
       <h1>MemberList Page</h1>
-      <div>
-        {props.input_member_list &&
+      <div></div>
+      {
+        props.input_member_list &&
           props.input_member_list.map((object, index) => {
             return (
               <div>
@@ -24,22 +22,14 @@ export default function MemberList(props) {
                 </p>
               </div>
             );
-          })}
-      </div>
+          })
+        //end expression
+      }
 
-      <div>
-        {props.input_member_list &&
-          props.input_member_list.map((member, index) => {
-            return (
-              <div>
-                <MemberCard
-                  input_object={member}
-                  input_func_set_Member={props.input_func_set_Member}
-                />
-              </div>
-            );
-          })}
-      </div>
+      <MemberCard
+        input_func_set_existingMember={set_existingMember}
+        input_temp_member={temp_members[0]}
+      />
     </div>
   );
 } //end MemberList function

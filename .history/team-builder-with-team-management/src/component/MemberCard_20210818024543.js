@@ -9,10 +9,7 @@ import Form from "../component/Form";
 export default function MemberCard(props) {
   return (
     <div>
-      <h3>
-        MemberCard {props.input_object.input_text_firstName}{" "}
-        {props.input_object.input_text_lastName}
-      </h3>
+      <h1>MemberCard Page</h1>
       <Form
         input_object={props.input_object}
         input_func_set_Member={props.input_func_set_Member}
