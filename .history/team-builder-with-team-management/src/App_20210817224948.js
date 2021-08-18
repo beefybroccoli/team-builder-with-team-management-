@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import Home from "./component/Home";
 
 function App(props) {
   return (
@@ -9,7 +8,9 @@ function App(props) {
         <h1>Team Builder with Team Management</h1>
       </header>
       <main>
-        <Home />
+        <Form />
+        <MemberList />
+        <p>Render the member cards</p>
       </main>
     </div>
   );
