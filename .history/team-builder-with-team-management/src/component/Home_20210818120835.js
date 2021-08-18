@@ -79,7 +79,7 @@ export default function Home(props) {
     // console.log("index = ", index);
     // console.log(`before temp_array[${index}] = `, temp_array[index]);
     temp_array[index] = member;
-    // console.log(`after temp_array[${index}] = `, temp_array[index]);
+    console.log(`after temp_array[${index/}] = `, temp_array[index]);
 
     //store temp_arry in member_list
     set_MemberList(temp_array);
