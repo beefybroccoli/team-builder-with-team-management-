@@ -40,12 +40,6 @@ export default function Form(props) {
 
       console.log("formData = ", formData);
     }
-
-    if ((props.button_name = "Modify")) {
-
-        
-
-    }
   }; //end onSubmit function
 
   const onChange = (event) => {

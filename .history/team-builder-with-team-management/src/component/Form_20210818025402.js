@@ -29,23 +29,19 @@ export default function Form(props) {
   const [formData, setFormData] = useState(initial_state);
 
   const onSubmit = (event) => {
-    if ((props.button_name = "Add")) {
-      event.preventDefault();
 
-      //add member to member_list
-      props.input_func_set_Member(formData);
-
-      //reset formData
-      setFormData(initial_state);
-
-      console.log("formData = ", formData);
-    }
-
-    if ((props.button_name = "Modify")) {
-
+    if (props.button_name = "Add"){
         
-
     }
+    event.preventDefault();
+
+    //add member to member_list
+    props.input_func_set_Member(formData);
+
+    //reset formData
+    setFormData(initial_state);
+
+    console.log("formData = ", formData);
   }; //end onSubmit function
 
   const onChange = (event) => {

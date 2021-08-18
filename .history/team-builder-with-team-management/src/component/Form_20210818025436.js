@@ -42,9 +42,6 @@ export default function Form(props) {
     }
 
     if ((props.button_name = "Modify")) {
-
-        
-
     }
   }; //end onSubmit function
 
